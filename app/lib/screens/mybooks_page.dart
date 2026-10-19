@@ -126,7 +126,7 @@ class _MyBooksPageState extends State<MyBooksPage> {
                                         ? Image.network(
                                             thumb,
                                             fit: BoxFit.cover,
-                                            errorBuilder: (_, __, ___) => _coverPlaceholder(context),
+                                            errorBuilder: (_, _, _) => _coverPlaceholder(context),
                                           )
                                         : _coverPlaceholder(context),
                                   ),

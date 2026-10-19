@@ -79,7 +79,7 @@ class _BookDetailPageState extends State<BookDetailPage> {
                       : info.imageLinks!.smallThumbnail,
                   height: 220,
                   fit: BoxFit.fitHeight,
-                  errorBuilder: (_, __, ___) => const Icon(
+                  errorBuilder: (_, _, _) => const Icon(
                     Icons.menu_book,
                     size: 120,
                     color: Colors.grey,

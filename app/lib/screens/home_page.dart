@@ -302,7 +302,7 @@ class _HomePageState extends State<HomePage> {
                       scrollDirection: Axis.horizontal,
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       itemCount: books.length,
-                      separatorBuilder: (_, __) => const SizedBox(width: 12),
+                      separatorBuilder: (_, _) => const SizedBox(width: 12),
                       itemBuilder: (context, index) {
                         final book = books[index];
                         return _RecentBookCard(book: book);
@@ -412,7 +412,7 @@ class _HomePageState extends State<HomePage> {
                         ? Image.network(
                             thumb,
                             fit: BoxFit.cover,
-                            errorBuilder: (_, __, ___) => _searchCoverPlaceholder(context),
+                            errorBuilder: (_, _, _) => _searchCoverPlaceholder(context),
                           )
                         : _searchCoverPlaceholder(context),
                   ),
@@ -529,7 +529,7 @@ class _RecentBookCard extends StatelessWidget {
                       width: cardWidth,
                       height: coverHeight,
                       fit: BoxFit.cover,
-                      errorBuilder: (_, __, ___) => _coverPlaceholder(cardWidth, coverHeight),
+                      errorBuilder: (_, _, _) => _coverPlaceholder(cardWidth, coverHeight),
                     )
                   : _coverPlaceholder(cardWidth, coverHeight),
             ),
